@@ -1,0 +1,19 @@
+name: To-Stable
+run-name: update-Snake
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    to-stable:
+        runs-on: ubuntu-latest
+        steps:
+            - name: install git
+              run: sudo apt install git
+              shell: bash
+            - name: versino of git
+              run: git --version
+            - name: check version
+              uses: actions/checkout@v3               
