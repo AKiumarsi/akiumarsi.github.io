@@ -12,5 +12,5 @@ jobs:
             - name: checkout
               uses: actions/checkout@v2
             - name: I don't know what is this
-              run: echo 's{{ toJSON(github.event) }}' | jq
+              run: echo '${{ toJSON(github.event) }}' | jq
               shell: bash               
