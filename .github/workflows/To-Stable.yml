@@ -9,6 +9,8 @@ jobs:
     comment-with-action:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout
+              uses: actions/checkout@v2
             - name: I don't know what is this
               run: echo 's{{ toJSON(github.event) }}' | jq
               shell: bash               
